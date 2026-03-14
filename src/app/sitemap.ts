@@ -2,6 +2,8 @@ import { MetadataRoute } from "next";
 
 const baseUrl = "https://artecor.com.br";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: baseUrl, lastModified: new Date(), changeFrequency: "weekly", priority: 1 },
