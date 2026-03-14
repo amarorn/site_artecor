@@ -3,27 +3,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { PORTFOLIO_ITEMS } from "@/config/portfolio";
 
-const PORTFOLIO_ITEMS = [
-  {
-    id: 1,
-    title: "Pintura Predial - Edifício Centro",
-    category: "pintura-predial",
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80",
-  },
-  {
-    id: 2,
-    title: "Fachada Residencial",
-    category: "pintura-residencial",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
-  },
-  {
-    id: 3,
-    title: "Limpeza de Fachada",
-    category: "limpeza-fachada",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
-  },
-];
+const HOMEPAGE_ITEMS = PORTFOLIO_ITEMS.slice(0, 3);
 
 export function PortfolioSection() {
   return (
@@ -44,7 +26,7 @@ export function PortfolioSection() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {PORTFOLIO_ITEMS.map((project, i) => (
+          {HOMEPAGE_ITEMS.map((project, i) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 20 }}
