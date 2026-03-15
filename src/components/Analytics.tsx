@@ -1,6 +1,7 @@
 import { SITE_CONFIG } from "@/config/site";
 
-const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+const GA_MEASUREMENT_ID =
+  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-V25TP4Y7MK";
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
 
 export function Analytics() {
